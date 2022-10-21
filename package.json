@@ -1,0 +1,28 @@
+{
+  "name": "ShopIT",
+  "version": "1.0.0",
+  "description": "MERN App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "author": "Siddheshsingh Tanwar",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "font-awesome": "^4.7.0",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20",
+    "react": "^18.2.0"
+  }
+}

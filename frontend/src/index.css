@@ -1,0 +1,14 @@
+main{
+  min-height: 90vh;
+  
+}
+.ml-auto{
+  margin-left: auto;
+}
+.linkdeco{
+  color: white;
+  text-decoration: none;
+}
+.white{
+  color: white;
+}
