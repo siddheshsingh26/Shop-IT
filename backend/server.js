@@ -5,18 +5,20 @@ const products = require('./data/products');
 const dotenv=require('dotenv');
 const connectDb =require('./config/config');
 const productsRoutes=require('./routes/productsRoute');
-
+const usersRoutes=require('./routes/UserRoute')
 // dotenv config
 dotenv.config();
 //connecting to mongodb database
 connectDb();
 const app =express();
+app.use(express.json());
 
 app.get('/',(req,res)=>{ 
     res.send('<h1>Welcome to Node Server</h1>')
 });
 
-app.use('/api',productsRoutes)
+app.use('/api',productsRoutes);
+app.use('/api/users',usersRoutes);
 app.use(errorHandler);
 const PORT=8080;
 app.listen(process.env.PORT || PORT,()=>{
